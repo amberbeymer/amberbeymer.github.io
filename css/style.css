@@ -83,7 +83,7 @@ header a:hover{
 /* Showcase */
 #showcase{
     min-height:400px;
-    background-image: url('../img/upwp.jpg');
+    background-image: url('../img/upwp.jpg'); repeat 
     background-repeat: no-repeat;
     text-align:center;
     color:#ffffff;
