@@ -92,9 +92,13 @@ def askELie():
     if ("No" or "no"):
       print("\033[1;32;40m   \n")
       print ("You got Rick Roll'd ;)")
-    else:
-      print("\033[1;32;40m   \n")
+    elif(RLie == "Yes" or RLie == "yes"):
+      print("\033[1;33;40m    \n")
       print ("I guess I'm the one Rick Roll'd :(")
+    else:
+      print("\033[1;31;40m    \033 \n")
+      print ("II did not understand your response")
+      askRLie()
     
 
 def askRDown():
@@ -164,9 +168,13 @@ def askRLie():
     if (RLie == "No" or RLie =="no"):
       print("\033[1;33;40m    \n")
       print ("You got Rick Roll'd ;)")
-    else:
+    elif(RLie == "Yes" or RLie == "yes"):
       print("\033[1;33;40m    \n")
       print ("I guess I'm the one Rick Roll'd :(")
+    else:
+      print("\033[1;31;40m    \033 \n")
+      print ("II did not understand your response")
+      askRLie()
 
     
     
