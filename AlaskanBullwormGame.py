@@ -9,7 +9,7 @@ black = (0,0,0)
 red = (255,0,0)
 green = (0,155,0)
 mint = (208, 249, 194) 
-grey = (206, 206, 185) 
+grey = (8, 6, 79) 
 purple = (230, 193, 255) #1. snake color to purple
 
 display_width = 800
@@ -21,14 +21,14 @@ pygame.display.set_caption('Alaskan BullWorm') #2. changed name of game
 
 img = pygame.image.load('wormhead.png')  #3. changed head of worm
 
-pineapple_img = pygame.image.load('pineapple.png')   #4. changed apples to pineapples
+pineapple_img = pygame.image.load('patty.png')   #4. changed apples to krabby patty (used to be pineapple variable)
 
 
 clock = pygame.time.Clock()
 
 AppleThickness = 30
 block_size = 20     #20x20 image for snake head
-FPS = 15 
+FPS = 25 
 
 direction = "right"
 
@@ -70,7 +70,7 @@ def pause():
     
 
 def score(score):
-    text = smallfont.render("Score: "+ str(score), True, black)
+    text = smallfont.render("Score: "+ str(score), True, white)
     gameDisplay.blit(text, [0,0])
 
 
@@ -109,11 +109,11 @@ def game_intro():
                           -100,
                           "large")
 
-        message_to_screen("The Objective of the game is to eat pineapples and slowly destroy spongebob's house >:D",
+        message_to_screen("The Objective of the game is to eat krabby patties",
                           grey,
                           -30,)
         
-        message_to_screen("The more pineapples you eat, the longer you get.",
+        message_to_screen("The more krabby patties you eat, the longer you get.",
                           grey,
                           10,)
         
@@ -127,7 +127,7 @@ def game_intro():
 
 
         pygame.display.update()
-        clock.tick(15)  #fps
+        clock.tick(25)  #fps
                           
 
         
@@ -192,10 +192,10 @@ def gameLoop():
                               red,
                               y_displace=-50,
                               size = "large")
-            message_to_screen("Press C to play again (you should) or Q to rage quit",
+            message_to_screen("Press C to play again or Q to rage quit",
                               grey,
                               50,
-                              size = "medium")
+                              size = "small")
             pygame.display.update()
 
             for event in pygame.event.get():
